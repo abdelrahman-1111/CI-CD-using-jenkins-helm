@@ -1,0 +1,17 @@
+#!groovy
+pipeline {
+    agent any
+    stages {           
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t abdelrahman1111/start-with-docker:python -f DevOps-Challenge/Dockerfile .'}
+            }
+        stage('Docker push') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'for_dockerhub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
+                    sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+                    sh 'docker push abdelrahman1111/start-with-docker:python'   }
+                }
+            }
+        }
+    }
