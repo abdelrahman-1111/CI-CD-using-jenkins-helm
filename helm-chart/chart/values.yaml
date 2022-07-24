@@ -1,12 +1,12 @@
 deployment:
   replicaCount: 2
 container:
-  name : "hamada"
+  name : "svc-app"
   port: 8000
 image:
   name: "abdelrahman1111/start-with-docker:python-final"
 service:
-  name: "service-hamada"
+  name: "service-app"
   type: "NodePort"
   nodePort: 30007
   targetPort: 8000
