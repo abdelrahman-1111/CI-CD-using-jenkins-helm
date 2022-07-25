@@ -23,7 +23,7 @@ But i needed to create a credentials to be authorize to push the image to my doc
 ![image](https://user-images.githubusercontent.com/104630009/180746587-663e4e76-b04a-480a-b528-bc74b1225a26.png)
 ### I modified my chart name and its version and set my app version to be 7.7.7 
 ![Screenshot from 2022-07-24 22-19-58](https://user-images.githubusercontent.com/104630009/180747958-47d72251-0d6a-4182-9479-33eee06feb5b.png)
-### Installing the chart using command `helm install <choose-release-name> /path/to/chart>
+### Installing the chart using command `helm install <choose-release-name> /path/to/chart`
 ![Screenshot from 2022-07-24 22-22-18](https://user-images.githubusercontent.com/104630009/180748009-aa7a0b74-d8aa-4294-8b49-0e5c066cbc63.png)
 ### check your pods to insure that your containers working correctly 
 ![Screenshot from 2022-07-24 22-22-45](https://user-images.githubusercontent.com/104630009/180748116-5ac5aefd-daea-48e3-901e-41c9247a47bd.png)
@@ -31,4 +31,3 @@ But i needed to create a credentials to be authorize to push the image to my doc
 ![Screenshot from 2022-07-25 11-48-32](https://user-images.githubusercontent.com/104630009/180749323-41d8829c-193e-4ea9-bf54-92a2125b5d5d.png)
 ### now open the ineternal node ip on port 30007 `as i set on my service nodeport`
 ![Screenshot from 2022-07-24 22-25-10](https://user-images.githubusercontent.com/104630009/180750017-380ea248-5f79-45c9-bddc-3a4eb42ac8f1.png)
-
