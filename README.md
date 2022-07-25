@@ -3,11 +3,21 @@
 ### I made a CI/CD pipeline using GitHub, jenkins and helm in which the deveopler push thier update on code on Github then i pull this code into my jenkins pipline then as first stage in my pipeline i build this code using Dockerfile then pushing this build (docker image) into my dockerhub repo.
 ### Now after my image is ready to deploy. i created a chart using helm to create a simple deployment and a service to deploy my app on them and made the templates changeable using variable and the values file to easily use them again in another deployment 
 ## Implementation
-### creating the pipeline 
+### Installing jekins using helm 
+- first i added the jenkins repo then install it 
+![Screenshot from 2022-07-24 22-34-23](https://user-images.githubusercontent.com/104630009/180751579-620ab7d1-52e0-479b-b2ab-160ebdcc1094.png)
+![Screenshot from 2022-07-24 22-38-09](https://user-images.githubusercontent.com/104630009/180751608-7866e150-24af-4c7a-87e5-1c6a4e224ab8.png)
+### To sign i needed the admin password which jenkins provide me with using this command
+![Screenshot from 2022-07-24 22-41-47](https://user-images.githubusercontent.com/104630009/180751852-8e614d22-3dad-4c5b-a304-5a4636eb5df5.png)
+### signing in 
+![Screenshot from 2022-07-24 22-44-50](https://user-images.githubusercontent.com/104630009/180751918-8fec21ba-a14f-4b7b-91ee-20b4994e555b.png)
+![Screenshot from 2022-07-24 22-53-31](https://user-images.githubusercontent.com/104630009/180752436-f0dd8f04-5008-4400-bd61-272676a8cf7b.png)
+### Now i can start to create my pipeline 
 ![Screenshot from 2022-07-24 22-05-44](https://user-images.githubusercontent.com/104630009/180744266-35e510f3-e851-45dc-944b-7e5743b53867.png)
 ### my jenkinsfile
 ![image](https://user-images.githubusercontent.com/104630009/180744762-ca4e629d-13d5-42ae-83cb-02bfa438ddb0.png)
 - https://github.com/abdelrahman-1111/CI-CD-using-jenkins-helm/blob/master/DevOps-Challenge/jenkinsfile
+
 But i needed to create a credentials to be authorize to push the image to my dockerhub repo so first i generate a token on my dockerhub account then create acredential on jenkins using it
 ![Screenshot from 2022-07-24 22-15-27](https://user-images.githubusercontent.com/104630009/180745658-23020485-8de4-43f5-bb3b-603345bf3301.png)
 ### my Dockerfile 
